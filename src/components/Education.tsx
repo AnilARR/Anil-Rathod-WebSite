@@ -42,7 +42,7 @@ export default function Education() {
             className="relative"
           >
             {/* Timeline node node connector */}
-            <div className="absolute -left-[31px] sm:-left-[39px] top-1.5 flex h-3.5 w-3.5 items-center justify-center bg-[#fafafa] dark:bg-[#050505] border border-slate-400 dark:border-white/20 rounded-none rotate-45">
+            <div className="absolute -left-[31px] sm:-left-[39px] top-1.5 flex h-3.5 w-3.5 items-center justify-center bg-[#fafafa] dark:bg-[#020817] border border-slate-400 dark:border-white/20 rounded-none rotate-45">
               <div className="h-1 w-1 bg-teal-450 dark:bg-white" />
             </div>
 

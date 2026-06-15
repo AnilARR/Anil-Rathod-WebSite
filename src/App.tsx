@@ -25,7 +25,7 @@ export default function App() {
 
   // Set default body background based on dark mode at start
   useEffect(() => {
-    document.body.style.backgroundColor = isDarkMode ? '#050505' : '#fafafa';
+    document.body.style.backgroundColor = isDarkMode ? '#020817' : '#fafafa';
   }, [isDarkMode]);
 
   // Section Observer (Scroll Spy)

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ChevronDown, ChevronUp, MapPin, Calendar, Award, Shield, Sparkles, Database, Layers } from 'lucide-react';
+import { ChevronDown, ChevronUp, MapPin, Calendar, Award, Shield, Sparkles, Database, Layers, LayoutGrid, Rows } from 'lucide-react';
 import { resumeData, Experience as ExpType } from '../resumeData';
 
 export default function Experience() {
   const [expandedId, setExpandedId] = useState<string | null>('exp-1'); // Default open first item
+  const [layoutMode, setLayoutMode] = useState<'split' | 'single'>('split');
 
   const toggleExpand = (id: string) => {
     setExpandedId(expandedId === id ? null : id);
@@ -55,13 +56,77 @@ export default function Experience() {
         <p className="mt-2 text-xs text-slate-500 max-w-sm font-sans dark:text-white/40">
           A granular chronicle of Anil&apos;s architectural mandates, fintech systems, and core distributed achievements.
         </p>
+
+        {/* Column & Design Layout Switch Controls */}
+        <div className="mt-8 flex items-center justify-center gap-1.5 p-1 rounded-sm border border-slate-350/[0.15] bg-black/5 dark:border-white/10 dark:bg-white/[0.02] max-w-xs mx-auto">
+          <button
+            onClick={() => setLayoutMode('split')}
+            className={`flex items-center gap-2 px-3 py-1.5 font-mono text-[9.5px] font-bold uppercase tracking-wider transition-all duration-300 rounded-xs cursor-pointer ${
+              layoutMode === 'split'
+                ? 'bg-slate-900 text-white dark:bg-white dark:text-black shadow-md'
+                : 'text-slate-500 hover:text-slate-800 dark:text-white/40 dark:hover:text-white/80'
+            }`}
+            title="Split Mode (2 Columns - Timeline & Highlights)"
+          >
+            <LayoutGrid className="h-3 w-3" />
+            Split (2C)
+          </button>
+          
+          <button
+            onClick={() => setLayoutMode('single')}
+            className={`flex items-center gap-2 px-3 py-1.5 font-mono text-[9.5px] font-bold uppercase tracking-wider transition-all duration-300 rounded-xs cursor-pointer ${
+              layoutMode === 'single'
+                ? 'bg-slate-900 text-white dark:bg-white dark:text-black shadow-md'
+                : 'text-slate-500 hover:text-slate-800 dark:text-white/40 dark:hover:text-white/80'
+            }`}
+            title="Focus Mode (1 Column - Full width timeline)"
+          >
+            <Rows className="h-3 w-3" />
+            Focus (1C)
+          </button>
+        </div>
       </div>
 
-      {/* Main Grid: Left Side Timeline Accordion, Right Side Impact Highlights Panel */}
-      <div className="mt-16 grid grid-cols-1 gap-10 lg:grid-cols-12">
-        
-        {/* Timeline Accordion List - span 7 */}
-        <div className="lg:col-span-8 flex flex-col gap-4">
+      {/* Conditionally Render Top-horizontal Highlights Bar only if layoutMode is 'single' to balance information weight */}
+      <AnimatePresence mode="wait">
+        {layoutMode === 'single' && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.35 }}
+            className="mt-12 overflow-hidden"
+          >
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-5 rounded-sm border border-slate-350/[0.15] bg-black/5 dark:border-white/10 dark:bg-white/[0.01] backdrop-blur-md">
+              {impactHighlights.map((hl, idx) => {
+                const Icon = hl.icon;
+                return (
+                  <div key={idx} className="flex gap-3 items-start">
+                    <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded bg-teal-500/10 text-teal-400 dark:bg-teal-500/25">
+                      <Icon className="h-3.5 w-3.5" />
+                    </div>
+                    <div>
+                      <h4 className="font-display text-[10px] font-black uppercase tracking-wider text-slate-800 dark:text-slate-200">
+                        {hl.title}
+                      </h4>
+                      <p className="mt-1 text-[11px] text-slate-400 leading-snug dark:text-slate-400">
+                        {hl.desc}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Main Grid content with dynamic column configuration */}
+      <div className="mt-16">
+        <div className={`grid grid-cols-1 gap-10 ${layoutMode === 'split' ? 'lg:grid-cols-12' : 'lg:grid-cols-1'}`}>
+          
+          {/* Timeline Accordion List */}
+          <div className={`${layoutMode === 'split' ? 'lg:col-span-8' : 'lg:col-span-1'} flex flex-col gap-4`}>
           {resumeData.experience.map((exp, idx) => {
             const isExpanded = expandedId === exp.id;
             return (
@@ -158,44 +223,55 @@ export default function Experience() {
           })}
         </div>
 
-        {/* Right Side: Impact Highlights Panel - span 4 */}
-        <div className="lg:col-span-4 select-none">
-          <div className="sticky top-28 rounded-sm border border-slate-350/[0.15] bg-black/5 dark:border-white/10 dark:bg-white/[0.01] p-6 backdrop-blur-md shadow-2xl">
-            <div className="flex items-center gap-2 pb-4 border-b border-slate-350/[0.15] dark:border-white/10">
-              <Sparkles className="h-4.5 w-4.5 text-teal-400 animate-pulse" />
-              <h3 className="font-display text-xs font-bold tracking-widest text-slate-800 dark:text-white uppercase">
-                Core Highlights
-              </h3>
-            </div>
-            
-            <p className="mt-4 text-[11px] text-slate-400 leading-relaxed dark:text-white/55">
-              Programmatic extraction of Anil Rathod&apos;s most high-value technical achievements from his history:
-            </p>
+        {/* Dynamic Sidebar Panel: Only visible in Split view */}
+        <AnimatePresence mode="wait">
+          {layoutMode === 'split' && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.3 }}
+              className="lg:col-span-4 select-none"
+            >
+              <div className="sticky top-28 rounded-sm border border-slate-350/[0.15] bg-black/5 dark:border-white/10 dark:bg-white/[0.01] p-6 backdrop-blur-md shadow-2xl">
+                <div className="flex items-center gap-2 pb-4 border-b border-slate-350/[0.15] dark:border-white/10">
+                  <Sparkles className="h-4.5 w-4.5 text-teal-400 animate-pulse" />
+                  <h3 className="font-display text-xs font-bold tracking-widest text-slate-800 dark:text-white uppercase">
+                    Core Highlights
+                  </h3>
+                </div>
+                
+                <p className="mt-4 text-[11px] text-slate-400 leading-relaxed dark:text-white/55">
+                  Programmatic extraction of Anil Rathod&apos;s most high-value technical achievements from his history:
+                </p>
 
-            <div className="mt-6 space-y-5">
-              {impactHighlights.map((hl, idx) => {
-                const Icon = hl.icon;
-                return (
-                  <div key={idx} className="flex gap-3">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-teal-500/10 text-teal-400 dark:bg-teal-500/25">
-                      <Icon className="h-4 w-4" />
-                    </div>
-                    <div>
-                      <h4 className="font-display text-xs font-bold text-slate-800 dark:text-slate-200">
-                        {hl.title}
-                      </h4>
-                      <p className="mt-1 text-xs text-slate-400 dark:text-slate-400">
-                        {hl.desc}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
+                <div className="mt-6 space-y-5">
+                  {impactHighlights.map((hl, idx) => {
+                    const Icon = hl.icon;
+                    return (
+                      <div key={idx} className="flex gap-3">
+                        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-teal-500/10 text-teal-400 dark:bg-teal-500/25">
+                          <Icon className="h-4 w-4" />
+                        </div>
+                        <div>
+                          <h4 className="font-display text-xs font-bold text-slate-800 dark:text-slate-200">
+                            {hl.title}
+                          </h4>
+                          <p className="mt-1 text-xs text-slate-400 dark:text-slate-400">
+                            {hl.desc}
+                          </p>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
       </div>
-    </section>
+    </div>
+  </section>
   );
 }

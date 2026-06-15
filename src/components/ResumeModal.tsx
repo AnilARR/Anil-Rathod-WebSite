@@ -32,7 +32,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="relative z-10 flex h-[90vh] w-full max-w-4xl flex-col rounded-none border border-slate-350/[0.15] dark:border-white/10 bg-[#050505]/95 text-slate-100 shadow-2xl overflow-hidden print:h-auto print:border-none print:bg-white print:p-0 print:text-black"
+            className="relative z-10 flex h-[90vh] w-full max-w-4xl flex-col rounded-none border border-slate-350/[0.15] dark:border-white/10 bg-[#020817]/95 text-slate-100 shadow-2xl overflow-hidden print:h-auto print:border-none print:bg-white print:p-0 print:text-black"
           >
             {/* Header / Actions - Hidden on print */}
             <div className="flex items-center justify-between border-b border-slate-350/[0.15] dark:border-white/10 bg-black/40 p-4 backdrop-blur-md print:hidden">
@@ -43,7 +43,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
               <div className="flex items-center gap-3">
                 <button
                   onClick={handlePrint}
-                  className="flex items-center gap-2 bg-[#1C1C1E] dark:bg-white text-white dark:text-[#050505] font-display text-[10px] font-bold uppercase tracking-widest px-4 py-2 transition-all cursor-pointer hover:opacity-90 duration-300"
+                  className="flex items-center gap-2 bg-[#1C1C1E] dark:bg-white text-white dark:text-[#020817] font-display text-[10px] font-bold uppercase tracking-widest px-4 py-2 transition-all cursor-pointer hover:opacity-90 duration-300"
                 >
                   <Download className="h-3.5 w-3.5" />
                   Print / Save PDF

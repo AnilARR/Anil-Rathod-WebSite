@@ -60,7 +60,7 @@ export default function Navbar({ isDarkMode, toggleTheme, activeSection, onOpenR
           {/* Download Resume Modal Trigger */}
           <button
             onClick={onOpenResume}
-            className="group flex items-center gap-2 bg-[#1C1C1E] text-white dark:bg-white dark:text-[#050505] border border-transparent hover:opacity-90 font-display text-[10px] font-bold uppercase tracking-widest px-5 py-2.5 transition-all cursor-pointer duration-300 pointer-events-auto"
+            className="group flex items-center gap-2 bg-[#1C1C1E] text-white dark:bg-white dark:text-[#020817] border border-transparent hover:opacity-90 font-display text-[10px] font-bold uppercase tracking-widest px-5 py-2.5 transition-all cursor-pointer duration-300 pointer-events-auto"
           >
             <FileText className="h-3.5 w-3.5 transition-transform group-hover:scale-110" />
             Resume Hub

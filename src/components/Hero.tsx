@@ -106,7 +106,7 @@ export default function Hero({ isDarkMode, onOpenResume }: HeroProps) {
           >
             <button
               onClick={handleScrollToExperience}
-              className="group flex items-center justify-center gap-2 bg-[#1C1C1E] text-white dark:bg-white dark:text-[#050505] font-display text-xs font-semibold uppercase tracking-widest rounded-sm px-8 py-4 shadow-xl hover:opacity-95 hover:scale-[1.02] transition-all cursor-pointer duration-300"
+              className="group flex items-center justify-center gap-2 bg-[#1C1C1E] text-white dark:bg-white dark:text-[#020817] font-display text-xs font-semibold uppercase tracking-widest rounded-sm px-8 py-4 shadow-xl hover:opacity-95 hover:scale-[1.02] transition-all cursor-pointer duration-300"
             >
               View Experience
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

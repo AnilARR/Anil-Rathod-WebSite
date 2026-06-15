@@ -38,7 +38,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
           id="splash-loader"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, scale: 0.98, transition: { duration: 0.4, ease: 'easeInOut' } }}
-          className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#050505] font-sans"
+          className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#020817] font-sans"
         >
           {/* Futuristic Background Decor */}
           <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30 pointer-events-none" />
@@ -49,7 +49,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
-              className="relative flex h-20 w-20 items-center justify-center border border-white/20 rotate-45 bg-[#050505] overflow-hidden"
+              className="relative flex h-20 w-20 items-center justify-center border border-white/20 rotate-45 bg-[#020817] overflow-hidden"
             >
               <div className="absolute inset-0 border border-dashed border-white/10" />
               <span className="-rotate-45 font-display text-2xl font-black tracking-tighter text-white">

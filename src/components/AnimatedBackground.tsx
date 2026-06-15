@@ -80,9 +80,9 @@ export default function AnimatedBackground({ isDarkMode }: AnimatedBackgroundPro
       );
 
       if (isDarkMode) {
-        gradient.addColorStop(0, '#050505');
-        gradient.addColorStop(0.5, '#070709');
-        gradient.addColorStop(1, '#050505');
+        gradient.addColorStop(0, '#020817');
+        gradient.addColorStop(0.5, '#041130');
+        gradient.addColorStop(1, '#020817');
       } else {
         gradient.addColorStop(0, '#fafafa');
         gradient.addColorStop(0.5, '#f5f5f5');
@@ -181,7 +181,7 @@ export default function AnimatedBackground({ isDarkMode }: AnimatedBackgroundPro
       <div
         className={`fixed inset-0 z-0 pointer-events-none transition-colors duration-500 ${
           isDarkMode
-            ? 'bg-[#050505]'
+            ? 'bg-[#020817]'
             : 'bg-[#fafafa]'
         }`}
       />
