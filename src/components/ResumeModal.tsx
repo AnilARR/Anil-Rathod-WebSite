@@ -37,7 +37,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
             {/* Header / Actions - Hidden on print */}
             <div className="flex items-center justify-between border-b border-slate-350/[0.15] dark:border-white/10 bg-black/40 p-4 backdrop-blur-md print:hidden">
               <div className="flex items-center gap-2">
-                <div className="h-2 w-2 rounded-full bg-teal-500 animate-pulse" />
+                <div className="h-2 w-2 rounded-full bg-amber-400 animate-pulse" />
                 <span className="font-display text-[10px] uppercase font-bold tracking-widest text-[#F5F5F5]">PRINT-READY RESUME ENGINE</span>
               </div>
               <div className="flex items-center gap-3">
@@ -63,10 +63,10 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                 
                 {/* Name & Contact Row */}
                 <div className="border-b border-slate-800 pb-6 print:border-slate-300">
-                  <h1 className="font-display text-3xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-teal-300 print:text-black print:bg-none print:text-3xl">
+                  <h1 className="font-cinzel text-3.5xl font-black tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-yellow-400 print:text-black print:bg-none print:text-3xl uppercase">
                     {resumeData.basics.name}
                   </h1>
-                  <p className="mt-1 font-sans text-sm font-semibold text-teal-400 print:text-slate-700">
+                  <p className="mt-1 font-sans text-sm font-semibold text-amber-400 print:text-slate-700">
                     {resumeData.basics.title}
                   </p>
                   
@@ -93,7 +93,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
 
                 {/* Main Summary */}
                 <div className="mt-6">
-                  <h2 className="font-display text-xs font-bold uppercase tracking-wider text-teal-400 print:text-indigo-900">Summary</h2>
+                  <h2 className="font-display text-xs font-bold uppercase tracking-wider text-amber-400 print:text-indigo-900">Summary</h2>
                   <p className="mt-2 text-xs leading-relaxed text-slate-300 print:text-slate-700">
                     {resumeData.basics.summary}
                   </p>
@@ -101,7 +101,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
 
                 {/* Selected Top Skills */}
                 <div className="mt-6">
-                  <h2 className="font-display text-xs font-bold uppercase tracking-wider text-teal-400 print:text-indigo-900">Technical Skills Matrix</h2>
+                  <h2 className="font-display text-xs font-bold uppercase tracking-wider text-amber-400 print:text-indigo-900">Technical Skills Matrix</h2>
                   <div className="mt-3 grid grid-cols-1 gap-4 rounded-none border border-slate-350/[0.15] dark:border-white/10 bg-black/20 p-4 sm:grid-cols-2 print:border-slate-200 print:bg-slate-50">
                     {resumeData.skills.map((grp) => (
                       <div key={grp.category}>
@@ -118,7 +118,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
 
                 {/* Professional History */}
                 <div className="mt-8">
-                  <h2 className="font-display text-xs font-bold uppercase tracking-wider text-teal-400 print:text-indigo-900">Experience Profile</h2>
+                  <h2 className="font-display text-xs font-bold uppercase tracking-wider text-amber-400 print:text-indigo-900">Experience Profile</h2>
                   <div className="mt-4 space-y-6">
                     {resumeData.experience.map((exp) => (
                       <div key={exp.id} className="relative">
@@ -133,7 +133,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                               </span>
                             )}
                             {exp.project && (
-                              <span className="ml-1.5 font-sans text-xs italic text-teal-400 print:text-indigo-600">
+                              <span className="ml-1.5 font-sans text-xs italic text-amber-400 print:text-indigo-600">
                                 [Project: {exp.project}]
                               </span>
                             )}
@@ -163,7 +163,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
 
                 {/* Education Section */}
                 <div className="mt-8">
-                  <h2 className="font-display text-xs font-bold uppercase tracking-wider text-teal-400 print:text-indigo-900">Education Background</h2>
+                  <h2 className="font-display text-xs font-bold uppercase tracking-wider text-amber-400 print:text-indigo-900">Education Background</h2>
                   <div className="mt-3 space-y-3">
                     {resumeData.education.map((edu, idx) => (
                       <div key={idx} className="flex justify-between items-baseline text-xs">
@@ -180,7 +180,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                 {/* Certifications and Honors */}
                 <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
                   <div>
-                    <h2 className="font-display text-xs font-bold uppercase tracking-wider text-teal-400 print:text-indigo-900">Certifications</h2>
+                    <h2 className="font-display text-xs font-bold uppercase tracking-wider text-amber-400 print:text-indigo-900">Certifications</h2>
                     <ul className="mt-3 list-inside list-disc space-y-1 text-xs text-slate-300 print:text-slate-700">
                       {resumeData.certifications.map((cert, idx) => (
                         <li key={idx}>
@@ -191,7 +191,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                   </div>
 
                   <div>
-                    <h2 className="font-display text-xs font-bold uppercase tracking-wider text-teal-400 print:text-indigo-900">Honors & Awards</h2>
+                    <h2 className="font-display text-xs font-bold uppercase tracking-wider text-amber-400 print:text-indigo-900">Honors & Awards</h2>
                     <div className="mt-3">
                       {resumeData.awards.map((awr, idx) => (
                         <div key={idx}>
@@ -210,7 +210,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
 
                 {/* Opportunities Matrix (extra[]) */}
                 <div className="mt-8 border-t border-slate-800 pt-6 print:border-slate-300">
-                  <h2 className="font-display text-xs font-bold uppercase tracking-wider text-teal-400 print:text-indigo-900">Open to Engagements</h2>
+                  <h2 className="font-display text-xs font-bold uppercase tracking-wider text-amber-400 print:text-indigo-900">Open to Engagements</h2>
                   <p className="mt-1.5 text-xs text-slate-300 print:text-slate-700">
                     {resumeData.extra.find(e => e.key === "Core Focus")?.value as string}
                   </p>

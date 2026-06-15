@@ -60,7 +60,7 @@ export default function Achievements() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="font-mono text-[9px] font-bold tracking-[0.25em] text-indigo-500 dark:text-indigo-350 uppercase"
+          className="font-mono text-[9px] font-bold tracking-[0.25em] text-amber-500 dark:text-amber-300 uppercase"
         >
           02 &middot; IMPACT INDEX
         </motion.p>
@@ -95,10 +95,10 @@ export default function Achievements() {
               
               <div className="flex items-start justify-between">
                 <div>
-                  <span className="font-mono text-[9px] font-bold text-teal-400 tracking-widest uppercase block mb-1">
+                  <span className="font-mono text-[9px] font-bold text-amber-400 tracking-widest uppercase block mb-1">
                     {item.category}
                   </span>
-                  <h3 className="font-display text-lg font-bold text-slate-800 dark:text-slate-100 group-hover:text-indigo-400 transition-all">
+                  <h3 className="font-display text-lg font-bold text-slate-800 dark:text-slate-100 group-hover:text-amber-400 transition-all">
                     {item.title}
                   </h3>
                 </div>

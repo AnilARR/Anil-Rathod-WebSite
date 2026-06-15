@@ -22,10 +22,10 @@ export default function Skills() {
 
   const getCategoryTheme = (idx: number) => {
     const schemas = [
-      { text: "text-indigo-400", bg: "bg-indigo-500/10", border: "border-indigo-500/20" },
-      { text: "text-teal-400", bg: "bg-teal-500/10", border: "border-teal-500/20" },
-      { text: "text-violet-400", bg: "bg-violet-500/10", border: "border-violet-500/20" },
-      { text: "text-emerald-400", bg: "bg-emerald-500/10", border: "border-emerald-500/20" },
+      { text: "text-amber-400", bg: "bg-amber-500/10", border: "border-amber-500/20" },
+      { text: "text-yellow-400", bg: "bg-yellow-500/10", border: "border-yellow-500/20" },
+      { text: "text-amber-300", bg: "bg-amber-500/10", border: "border-amber-500/20" },
+      { text: "text-yellow-500", bg: "bg-yellow-500/10", border: "border-yellow-500/20" },
     ];
     return schemas[idx % schemas.length];
   };
@@ -54,7 +54,7 @@ export default function Skills() {
     <section id="skills" className="relative px-4 py-24 md:px-8 max-w-7xl mx-auto font-sans select-none">
       
       {/* Accent vector behind */}
-      <div className="absolute right-10 bottom-0 -z-10 h-64 w-64 rounded-full bg-teal-500/5 blur-[90px] pointer-events-none" />
+      <div className="absolute right-10 bottom-0 -z-10 h-64 w-64 rounded-full bg-amber-500/5 blur-[90px] pointer-events-none" />
 
       {/* Header */}
       <div className="flex flex-col items-center text-center select-none">
@@ -62,7 +62,7 @@ export default function Skills() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="font-mono text-[9px] font-bold tracking-[0.25em] text-teal-500 dark:text-teal-300 uppercase"
+          className="font-mono text-[9px] font-bold tracking-[0.25em] text-amber-500 dark:text-amber-300 uppercase"
         >
           03 &middot; STACK SPECTRUM
         </motion.p>
@@ -267,7 +267,7 @@ export default function Skills() {
                                 </span>
                               ))}
                               {grp.skills.length > 6 && (
-                                <span className="text-[8.5px] text-indigo-400 font-mono ml-1 align-middle pt-0.5">
+                                <span className="text-[8.5px] text-amber-400 font-mono ml-1 align-middle pt-0.5">
                                   +{grp.skills.length - 6} more
                                 </span>
                               )}
@@ -277,14 +277,14 @@ export default function Skills() {
                           {/* Col 3 */}
                           <td className="p-4 align-top">
                             <div className="flex items-center gap-1.5 text-slate-500 dark:text-slate-400 font-mono text-[10px]">
-                              <span className="h-1.5 w-1.5 rounded-full bg-teal-400 animate-pulse" />
+                              <span className="h-1.5 w-1.5 rounded-full bg-amber-400 animate-pulse" />
                               <span>{meta.tracking}</span>
                             </div>
                           </td>
 
                           {/* Col 4 */}
                           <td className="p-4 pr-6 align-top text-right">
-                            <span className="inline-flex items-center gap-1.5 rounded-sm bg-emerald-500/10 px-2.5 py-1 font-mono text-[9px] font-bold text-emerald-500 dark:text-emerald-355 uppercase">
+                            <span className="inline-flex items-center gap-1.5 rounded-sm bg-amber-500/10 px-2.5 py-1 font-mono text-[9px] font-bold text-amber-500 dark:text-amber-300 uppercase">
                               <ShieldCheck className="h-3 w-3 shrink-0" />
                               Verified
                             </span>
@@ -319,7 +319,7 @@ export default function Skills() {
               transition={{ delay: cidx * 0.05, duration: 0.4 }}
               className="flex items-center gap-2 rounded-sm border border-slate-350/[0.15] bg-black/5 px-4 py-2 hover:bg-black/10 transition-colors dark:border-white/10 dark:bg-white/[0.02] text-[11px] font-semibold text-slate-500 dark:text-white/70 shadow-sm"
             >
-              <div className="h-1.5 w-1.5 rounded-full bg-teal-400 dark:bg-white animate-pulse" />
+              <div className="h-1.5 w-1.5 rounded-full bg-amber-400 dark:bg-white animate-pulse" />
               <span>{cert.name}</span>
             </motion.div>
           ))}

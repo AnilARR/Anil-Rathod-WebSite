@@ -118,13 +118,13 @@ export default function App() {
                       href={resumeData.basics.links.linkedin}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-slate-400 hover:text-indigo-400 transition"
+                      className="text-slate-400 hover:text-amber-400 transition"
                     >
                       <Linkedin className="h-4 w-4" />
                     </a>
                     <a
                       href={`mailto:${resumeData.basics.email}`}
-                      className="text-slate-400 hover:text-teal-400 transition"
+                      className="text-slate-400 hover:text-yellow-400 transition"
                     >
                       <Mail className="h-4 w-4" />
                     </a>
@@ -132,7 +132,7 @@ export default function App() {
                       href={resumeData.basics.links.portfolio}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-slate-400 hover:text-violet-400 transition"
+                      className="text-slate-400 hover:text-amber-300 transition"
                     >
                       <Globe className="h-4 w-4" />
                     </a>

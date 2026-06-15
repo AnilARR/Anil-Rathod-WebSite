@@ -44,7 +44,7 @@ export default function Experience() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="font-mono text-[9px] font-bold tracking-[0.25em] text-teal-500 dark:text-teal-300 uppercase"
+          className="font-mono text-[9px] font-bold tracking-[0.25em] text-amber-500 dark:text-amber-300 uppercase"
         >
           01 &middot; CAREER JOURNEY
         </motion.p>
@@ -102,7 +102,7 @@ export default function Experience() {
                 const Icon = hl.icon;
                 return (
                   <div key={idx} className="flex gap-3 items-start">
-                    <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded bg-teal-500/10 text-teal-400 dark:bg-teal-500/25">
+                    <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded bg-amber-500/10 text-amber-400 dark:bg-amber-500/25">
                       <Icon className="h-3.5 w-3.5" />
                     </div>
                     <div>
@@ -146,11 +146,11 @@ export default function Experience() {
                 >
                   <div className="flex-1">
                     <div className="flex flex-wrap items-center gap-y-1 gap-x-3">
-                      <h4 className="font-display text-base font-bold text-slate-800 dark:text-slate-100 group-hover:text-indigo-400 transition-colors">
+                      <h4 className="font-display text-base font-bold text-slate-800 dark:text-slate-100 group-hover:text-amber-400 transition-colors">
                         {exp.company}
                       </h4>
                       {exp.client && (
-                        <span className="font-mono text-[10px] font-bold text-teal-400 dark:text-teal-300 light:text-teal-700 border border-teal-500/20 rounded-full px-2 py-0.5 bg-teal-500/5">
+                        <span className="font-mono text-[10px] font-bold text-amber-400 dark:text-amber-300 light:text-amber-700 border border-amber-500/20 rounded-full px-2 py-0.5 bg-amber-500/5">
                           Client: {exp.client}
                         </span>
                       )}
@@ -235,7 +235,7 @@ export default function Experience() {
             >
               <div className="sticky top-28 rounded-sm border border-slate-350/[0.15] bg-black/5 dark:border-white/10 dark:bg-white/[0.01] p-6 backdrop-blur-md shadow-2xl">
                 <div className="flex items-center gap-2 pb-4 border-b border-slate-350/[0.15] dark:border-white/10">
-                  <Sparkles className="h-4.5 w-4.5 text-teal-400 animate-pulse" />
+                  <Sparkles className="h-4.5 w-4.5 text-amber-400 animate-pulse" />
                   <h3 className="font-display text-xs font-bold tracking-widest text-slate-800 dark:text-white uppercase">
                     Core Highlights
                   </h3>
@@ -250,7 +250,7 @@ export default function Experience() {
                     const Icon = hl.icon;
                     return (
                       <div key={idx} className="flex gap-3">
-                        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-teal-500/10 text-teal-400 dark:bg-teal-500/25">
+                        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-amber-500/10 text-amber-400 dark:bg-amber-500/25">
                           <Icon className="h-4 w-4" />
                         </div>
                         <div>

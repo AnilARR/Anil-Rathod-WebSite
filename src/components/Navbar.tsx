@@ -36,8 +36,8 @@ export default function Navbar({ isDarkMode, toggleTheme, activeSection, onOpenR
           <div className="w-10 h-10 border border-slate-350/[0.15] dark:border-white/20 flex items-center justify-center rotate-45 bg-black/40 dark:bg-white/5 transition-transform hover:rotate-135 duration-700">
             <span className="-rotate-45 font-display font-black text-xs tracking-tighter text-slate-800 dark:text-white">AR</span>
           </div>
-          <span className="font-display text-[10px] font-bold tracking-[0.25em] text-slate-500 dark:text-white/40 uppercase">
-            Anil Rathod <span className="font-mono text-[8.5px] tracking-normal text-teal-400 uppercase ml-1.5 font-bold">v1.1</span>
+          <span className="font-cinzel text-xs font-black tracking-[0.18em] text-slate-800 dark:text-amber-100 uppercase">
+            Anil Rathod <span className="font-mono text-[8.5px] tracking-normal text-amber-400 uppercase ml-1.5 font-bold">v1.1</span>
           </span>
         </motion.div>
 
@@ -79,7 +79,7 @@ export default function Navbar({ isDarkMode, toggleTheme, activeSection, onOpenR
           {/* Mobile Theme Switcher (Left aligned inside navigation bar) */}
           <button
             onClick={toggleTheme}
-            className="flex h-11 w-11 items-center justify-center rounded-xl text-slate-400 transition-all md:hidden hover:text-teal-400 cursor-pointer"
+            className="flex h-11 w-11 items-center justify-center rounded-xl text-slate-400 transition-all md:hidden hover:text-amber-400 cursor-pointer"
           >
             {isDarkMode ? <Sun className="h-4.5 w-4.5" /> : <Moon className="h-4.5 w-4.5" />}
           </button>
@@ -100,7 +100,7 @@ export default function Navbar({ isDarkMode, toggleTheme, activeSection, onOpenR
                 {isActive && (
                   <motion.div
                     layoutId="activeNavIndicator"
-                    className="absolute inset-0 bg-slate-100 dark:bg-white/5 border-b border-indigo-500 dark:border-white"
+                    className="absolute inset-0 bg-slate-100 dark:bg-white/5 border-b border-amber-500 dark:border-white"
                     transition={{ type: 'spring', stiffness: 350, damping: 25 }}
                   />
                 )}
@@ -108,14 +108,14 @@ export default function Navbar({ isDarkMode, toggleTheme, activeSection, onOpenR
                 <Icon
                   className={`h-4.5 w-4.5 transition-transform group-hover:-translate-y-0.5 ${
                     isActive
-                      ? 'text-indigo-400 dark:text-indigo-400 light:text-indigo-600'
+                      ? 'text-amber-400 dark:text-amber-400 light:text-amber-600'
                       : 'text-slate-400 group-hover:text-slate-200 light:text-slate-500 light:group-hover:text-slate-800'
                   }`}
                 />
                 <span
                   className={`mt-1 font-sans text-[9px] font-medium tracking-tight whitespace-nowrap transition-colors ${
                     isActive
-                      ? 'text-indigo-400 dark:text-indigo-400 light:text-indigo-600'
+                      ? 'text-amber-400 dark:text-amber-400 light:text-amber-600'
                       : 'text-slate-400 group-hover:text-slate-200 light:text-slate-500 light:group-hover:text-slate-800'
                   }`}
                 >
@@ -130,7 +130,7 @@ export default function Navbar({ isDarkMode, toggleTheme, activeSection, onOpenR
           {/* Mobile Resume Trigger */}
           <button
             onClick={onOpenResume}
-            className="flex h-11 w-11 items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-400 transition-all md:hidden hover:bg-indigo-500/25 cursor-pointer"
+            className="flex h-11 w-11 items-center justify-center rounded-xl bg-amber-500/10 text-amber-400 transition-all md:hidden hover:bg-amber-500/25 cursor-pointer"
           >
             <FileText className="h-4.5 w-4.5" />
           </button>

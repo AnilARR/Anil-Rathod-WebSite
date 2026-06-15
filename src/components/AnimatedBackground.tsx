@@ -100,10 +100,10 @@ export default function AnimatedBackground({ isDarkMode }: AnimatedBackgroundPro
 
       const glowGrad1 = ctx.createRadialGradient(glowX1, glowY1, 0, glowX1, glowY1, glowRad1);
       if (isDarkMode) {
-        glowGrad1.addColorStop(0, 'rgba(79, 70, 229, 0.05)'); // subtle indigo
+        glowGrad1.addColorStop(0, 'rgba(245, 158, 11, 0.04)'); // subtle gold-amber
         glowGrad1.addColorStop(1, 'rgba(0, 0, 0, 0)');
       } else {
-        glowGrad1.addColorStop(0, 'rgba(99, 102, 241, 0.06)');
+        glowGrad1.addColorStop(0, 'rgba(234, 179, 8, 0.05)');
         glowGrad1.addColorStop(1, 'rgba(255, 255, 255, 0)');
       }
       ctx.fillStyle = glowGrad1;
@@ -115,10 +115,10 @@ export default function AnimatedBackground({ isDarkMode }: AnimatedBackgroundPro
 
       const glowGrad2 = ctx.createRadialGradient(glowX2, glowY2, 0, glowX2, glowY2, glowRad2);
       if (isDarkMode) {
-        glowGrad2.addColorStop(0, 'rgba(20, 184, 166, 0.04)'); // subtle teal
+        glowGrad2.addColorStop(0, 'rgba(234, 179, 8, 0.03)'); // subtle yellow-gold
         glowGrad2.addColorStop(1, 'rgba(0, 0, 0, 0)');
       } else {
-        glowGrad2.addColorStop(0, 'rgba(20, 184, 166, 0.05)');
+        glowGrad2.addColorStop(0, 'rgba(245, 158, 11, 0.04)');
         glowGrad2.addColorStop(1, 'rgba(255, 255, 255, 0)');
       }
       ctx.fillStyle = glowGrad2;
@@ -126,8 +126,8 @@ export default function AnimatedBackground({ isDarkMode }: AnimatedBackgroundPro
 
       // 3. Render Particles + Connecting lines
       const lineDist = isMobile() ? 75 : 120;
-      const colorParticle = isDarkMode ? 'rgba(226, 232, 240,' : 'rgba(71, 85, 105,';
-      const colorLine = isDarkMode ? 'rgba(99, 102, 241,' : 'rgba(99, 102, 241,';
+      const colorParticle = isDarkMode ? 'rgba(251, 191, 36,' : 'rgba(217, 119, 6,';
+      const colorLine = isDarkMode ? 'rgba(245, 158, 11,' : 'rgba(217, 119, 6,';
 
       particles.forEach((p, idx) => {
         // Move particle

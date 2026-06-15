@@ -45,8 +45,8 @@ export default function Hero({ isDarkMode, onOpenResume }: HeroProps) {
     <section className="relative flex min-h-screen flex-col justify-center px-4 pt-24 pb-20 md:px-8 max-w-7xl mx-auto overflow-hidden">
       
       {/* Visual Background Accent / Subtle Mesh Grid Glow */}
-      <div className="absolute right-0 top-1/4 -z-10 h-72 w-72 rounded-full bg-indigo-500/10 blur-[100px] pointer-events-none" />
-      <div className="absolute left-1/4 bottom-1/4 -z-10 h-72 w-72 rounded-full bg-teal-500/10 blur-[100px] pointer-events-none" />
+      <div className="absolute right-0 top-1/4 -z-10 h-72 w-72 rounded-full bg-amber-500/5 blur-[100px] pointer-events-none" />
+      <div className="absolute left-1/4 bottom-1/4 -z-10 h-72 w-72 rounded-full bg-yellow-500/5 blur-[100px] pointer-events-none" />
 
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
         {/* Left Side: Cinematic Copy */}
@@ -70,10 +70,10 @@ export default function Hero({ isDarkMode, onOpenResume }: HeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15, duration: 0.6 }}
-            className="mt-6 font-display text-5xl font-black tracking-tighter sm:text-7xl leading-[0.85] uppercase text-left text-slate-900 dark:text-white"
+            className="mt-6 font-cinzel text-5xl font-black tracking-wide sm:text-7.5xl leading-[1.05] uppercase text-left text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-yellow-400 to-amber-500 drop-shadow-[0_2px_10px_rgba(245,158,11,0.2)]"
           >
             ANIL <br />
-            <span className="text-transparent" style={{ WebkitTextStroke: isDarkMode ? '1.5px rgba(255,255,255,0.85)' : '1.5px rgba(15,23,42,0.85)', webkitTextStroke: isDarkMode ? '1.5px rgba(255,255,255,0.85)' : '1.5px rgba(15,23,42,0.85)' }}>
+            <span className="font-cinzel text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-amber-400 to-yellow-600 font-black">
               RATHOD
             </span>
           </motion.h1>
@@ -140,21 +140,21 @@ export default function Hero({ isDarkMode, onOpenResume }: HeroProps) {
             <div className="pt-6 space-y-4">
               <div className="flex justify-between items-center bg-black/20 dark:bg-white/[0.01] p-3 rounded-sm border border-slate-300/[0.15] dark:border-white/5">
                 <span className="font-mono text-xs text-slate-500">SYSTEM STACK</span>
-                <span className="font-mono text-xs font-semibold text-teal-400">RESTful / ETL</span>
+                <span className="font-mono text-xs font-semibold text-amber-400">RESTful / ETL</span>
               </div>
               <div className="flex justify-between items-center bg-black/20 dark:bg-white/[0.01] p-3 rounded-sm border border-slate-300/[0.15] dark:border-white/5">
                 <span className="font-mono text-xs text-slate-500">DATABASE GURU</span>
-                <span className="font-mono text-xs font-semibold text-indigo-400">Oracle / SQL Server</span>
+                <span className="font-mono text-xs font-semibold text-yellow-400">Oracle / SQL Server</span>
               </div>
               <div className="flex justify-between items-center bg-black/20 dark:bg-white/[0.01] p-3 rounded-sm border border-slate-300/[0.15] dark:border-white/5">
                 <span className="font-mono text-xs text-slate-500">CLOUD REACH</span>
-                <span className="font-mono text-xs font-semibold text-violet-400">Azure / AWS</span>
+                <span className="font-mono text-xs font-semibold text-amber-500">Azure / AWS</span>
               </div>
               
               <div className="font-mono text-[10px] text-slate-500 leading-relaxed border-t border-slate-300/[0.15] dark:border-white/10 pt-4">
-                <span className="text-indigo-400">&gt;</span> Initialize mapping... <br />
-                <span className="text-teal-400">&gt;</span> 5+ Years experience parsed.<br />
-                <span className="text-emerald-400">&gt;</span> Standard authentication enabled [JWT/AES/RSA].
+                <span className="text-amber-400">&gt;</span> Initialize mapping... <br />
+                <span className="text-yellow-400">&gt;</span> 5+ Years experience parsed.<br />
+                <span className="text-amber-300">&gt;</span> Standard authentication enabled [JWT/AES/RSA].
               </div>
             </div>
           </motion.div>
@@ -168,7 +168,7 @@ export default function Hero({ isDarkMode, onOpenResume }: HeroProps) {
           <div className="absolute left-0 right-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-slate-300/[0.15] dark:via-white/10 to-transparent" />
           
           <div className="pt-8 text-center">
-            <p className="font-mono text-[9px] font-bold uppercase tracking-[0.25em] text-indigo-400 dark:text-indigo-300">
+            <p className="font-mono text-[9px] font-bold uppercase tracking-[0.25em] text-amber-400 dark:text-amber-300">
               Above the Fold &middot; Professional Metrics
             </p>
             <h3 className="mt-1.5 font-display text-xl font-bold tracking-tight text-slate-800 dark:text-slate-100 uppercase">
@@ -189,14 +189,14 @@ export default function Hero({ isDarkMode, onOpenResume }: HeroProps) {
                   className="group relative flex flex-col rounded-sm border border-slate-350/[0.15] bg-black/5 p-6 backdrop-blur-md dark:border-white/10 dark:bg-white/[0.01]"
                 >
                   <div className="flex items-center justify-between mb-4">
-                    <div className="flex h-9 w-9 items-center justify-center rounded-sm bg-indigo-500/10 text-indigo-400 dark:bg-white/5 dark:text-white">
+                    <div className="flex h-9 w-9 items-center justify-center rounded-sm bg-amber-500/10 text-amber-400 dark:bg-white/5 dark:text-white">
                       <Icon className="h-4.5 w-4.5" />
                     </div>
-                    <span className="font-mono text-[9px] font-bold tracking-wider rounded-sm bg-teal-500/10 dark:bg-teal-500/20 text-teal-500 dark:text-teal-300 px-3 py-1 uppercase">
+                    <span className="font-mono text-[9px] font-bold tracking-wider rounded-sm bg-amber-500/10 dark:bg-amber-500/20 text-amber-500 dark:text-amber-300 px-3 py-1 uppercase">
                       {item.badge}
                     </span>
                   </div>
-                  <h4 className="font-display text-sm font-bold text-slate-800 dark:text-slate-200 group-hover:text-indigo-400 dark:group-hover:text-white transition-colors">
+                  <h4 className="font-display text-sm font-bold text-slate-800 dark:text-slate-200 group-hover:text-amber-400 dark:group-hover:text-white transition-colors">
                     {item.title}
                   </h4>
                   <p className="mt-2 text-xs leading-relaxed text-slate-500 dark:text-white/50">

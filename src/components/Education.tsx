@@ -16,7 +16,7 @@ export default function Education() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="font-mono text-[9px] font-bold tracking-[0.25em] text-teal-400 dark:text-teal-300 uppercase"
+          className="font-mono text-[9px] font-bold tracking-[0.25em] text-amber-500 dark:text-amber-300 uppercase"
         >
           04 &middot; ACADEMICS
         </motion.p>
@@ -43,12 +43,12 @@ export default function Education() {
           >
             {/* Timeline node node connector */}
             <div className="absolute -left-[31px] sm:-left-[39px] top-1.5 flex h-3.5 w-3.5 items-center justify-center bg-[#fafafa] dark:bg-[#020817] border border-slate-400 dark:border-white/20 rounded-none rotate-45">
-              <div className="h-1 w-1 bg-teal-450 dark:bg-white" />
+              <div className="h-1 w-1 bg-amber-400 dark:bg-white" />
             </div>
 
             <div className="rounded-sm border border-slate-350/[0.15] bg-black/5 dark:border-white/10 dark:bg-white/[0.01] p-5 sm:p-6 backdrop-blur-md">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                <span className="font-mono text-[9px] font-bold text-teal-500 tracking-widest uppercase">
+                <span className="font-mono text-[9px] font-bold text-amber-400 tracking-widest uppercase">
                   Academic Node {idx + 1}
                 </span>
 

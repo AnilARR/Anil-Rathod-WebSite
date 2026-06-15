@@ -62,7 +62,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
               initial={{ y: 15, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.5 }}
-              className="mt-10 font-display text-xs font-black uppercase tracking-[0.25em] text-[#F5F5F5]"
+              className="mt-10 font-cinzel text-sm font-black uppercase tracking-[0.3em] text-[#F5F5F5]"
             >
               ANIL RATHOD
             </motion.h1>
@@ -71,7 +71,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 0.5 }}
               transition={{ delay: 0.35, duration: 0.5 }}
-              className="mt-1.5 font-mono text-[9px] tracking-widest text-teal-400 uppercase"
+              className="mt-1.5 font-mono text-[9px] tracking-widest text-amber-400 uppercase"
             >
               ENTERPRISE .NET HYBRID
             </motion.p>
